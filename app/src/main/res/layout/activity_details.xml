@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activity.DetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:contentDescription="@string/walk_type_image"
+                android:layout_width="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:id="@+id/walk_iv"
+                android:src="@drawable/ic_walk_med"
+                android:layout_height="120dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:labelFor="@id/start_time_et"
+                    android:layout_margin="4dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/start_time"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:padding="12dp"
+                    android:id="@+id/start_time_et"
+                    android:layout_gravity="center"
+                    android:background="@drawable/detail_et_bg"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:labelFor="@id/end_time_et"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/end_time"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:id="@+id/end_time_et"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/detail_et_bg"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:labelFor="@id/date_et"
+                    android:layout_margin="4dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/date"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:focusable="false"
+                    android:textAlignment="center"
+                    android:clickable="false"
+                    android:id="@+id/date_et"
+                    android:layout_gravity="center"
+                    android:background="@drawable/detail_et_bg"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:labelFor="@id/calorie_burn_et"
+                    android:textColor="@android:color/black"
+                    android:text="@string/calorie_burn"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:textSize="16sp"
+                    android:id="@+id/calorie_burn_et"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:textAlignment="center"
+                    android:padding="12dp"
+                    android:hint="@string/auto_calculated"
+                    android:textColorHint="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:background="@drawable/detail_et_bg"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:labelFor="@id/distance_et"
+                    android:textColor="@android:color/black"
+                    android:text="@string/distance"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/distance_in_meters"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/distance_et"
+                    android:layout_gravity="center"
+                    android:background="@drawable/detail_et_bg"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/save"
+                android:id="@+id/save_or_delete_btn"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/detail_et_bg"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

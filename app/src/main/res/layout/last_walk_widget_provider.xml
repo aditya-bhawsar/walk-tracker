@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_margin="8dp"
+        android:background="#000"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/walk_lay"
+        android:layout_margin="8dp"
+        android:weightSum="5"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:id="@+id/walk_iv"
+            android:contentDescription="@string/walk_type_image"
+            android:layout_weight="1.5"
+            android:layout_marginEnd="4dp"
+            android:layout_height="100dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_marginStart="4dp"
+            android:weightSum="3"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="16sp"
+                tools:text="12:30:40 PM - 01:30:40 PM"
+                android:id="@+id/time_tv"
+                android:layout_height="0dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                tools:text="Distance : 540 Meters"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textColor="@android:color/black"
+                android:id="@+id/distance_tv"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:gravity="bottom"
+                tools:text="Date : 12/12/12"
+                android:id="@+id/date_tv"
+                android:textAlignment="viewEnd"
+                android:layout_height="0dp"
+                tools:ignore="RtlCompat" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/empty_database_tv"
+        android:text="@string/empty_widget"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
